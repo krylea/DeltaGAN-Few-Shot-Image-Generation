@@ -172,7 +172,7 @@ class DAGAN:
             # z_input11 = tf.random_normal([self.batch_size, self.z_dim], mean=0, stddev=1)
             # z_input_21 = tf.random_normal([self.batch_size, self.z_dim], mean=0, stddev=1)
             z_input11 = tf.random_uniform(shape=[self.batch_size, self.z_dim], minval=-1, maxval=1)
-            z_input_21 = tf.random_uniform(shape=[self.batch_size, self.z_dim], minval=-1, maxval=1)
+            z_input_22 = tf.random_uniform(shape=[self.batch_size, self.z_dim], minval=-1, maxval=1)
         if self.training:
             gan_decoder_delta, gan_decoder_delta2, gan_recons_image1, gan_decoder_delta_trs, z_inputs, z_inputs_2, fake_delta, fake_delta2, real_delta_x1x2, decoder_layers, decoder_layers2, \
             mmd_delta, renconstruction_loss_image = self.g(
