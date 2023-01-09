@@ -498,7 +498,7 @@ class VGGFaceDAGANDataset(DAGANDataset):
                                                   general_classification_samples, selected_classes, image_size)
 
     def load_dataset(self, gan_training_index):
-        self.x = np.load("../Matching-DAGAN-1wayKshot/datasets/vgg_face_data.npy")
+        self.x = np.load("/h/kaselby/set-gan/data/vgg_face_data.npy")
         self.x = self.x * 255
         # self.x = self.x / np.max(self.x)
         x_train, x_val, x_test = self.x[:1803], self.x[1803:2300], self.x[2300:]
