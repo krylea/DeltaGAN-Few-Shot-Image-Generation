@@ -633,7 +633,7 @@ class animalsDAGANDataset(DAGANDataset):
 
     def load_dataset(self, gan_training_index):
         # self.x = np.load("../Matching-DAGAN-1wayKshot/datasets/animals_3_100_3_100_data.npy")
-        self.x = np.load("../datasets/animal_facesimages_content_3000.npy")
+        self.x = np.load("./datasets/animal_facesimages_content_3000.npy")
 
         print('data shape', np.shape(self.x))
         # print('max value', np.max(self.x))
