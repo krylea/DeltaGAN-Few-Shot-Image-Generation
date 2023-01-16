@@ -171,7 +171,7 @@ class ExperimentBuilder(object):
         # self.init = tf.group(tf.global_variables_initializer(), tf.local_variables_initializer())
 
         self.tensorboard_update_interval = int(self.total_train_batches / 1 / self.num_gpus)
-        self.total_epochs = 500
+        self.total_epochs = 200
 
         # if self.continue_from_epoch == -1:
         #     save_statistics(self.log_path, ['epoch', 'total_d_train_loss_mean', 'total_d_val_loss_mean',
