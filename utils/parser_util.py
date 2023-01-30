@@ -77,6 +77,7 @@ def get_args():
     batch_size = args.batch_size
     num_gpus = args.num_of_gpus
     support_number = args.support_number
+    args.restore_path = args.experiment_title
 
     args_dict = vars(args)
     for key in list(args_dict.keys()):
