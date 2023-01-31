@@ -460,26 +460,26 @@ def splitting_ffhq_age(root_csv, root_image, save_dir):
 
 
 
+if __name__ == '__main__':
 
 
+    import argparse
 
-import argparse
+    parser = argparse.ArgumentParser(description='Welcome to GAN-Shot-Learning script')
 
-parser = argparse.ArgumentParser(description='Welcome to GAN-Shot-Learning script')
+    parser.add_argument('--dataroot', nargs="?", type=str, default='/media/user/data/meta_gan/Matching-DAGAN-1wayKshot/coarse-data/ffhqaging128/')
+    parser.add_argument('--storepath', nargs="?", type=str,
+                        default='/media/user/data/meta_gan/Matching-DAGAN-1wayKshot/datasets/')
+    parser.add_argument('--image_width', nargs="?", type=int, default=128)
+    parser.add_argument('--image_channel', nargs="?", type=int, default=3)
+    parser.add_argument('--augmented_support', nargs="?", type=int, default=3000)
 
-parser.add_argument('--dataroot', nargs="?", type=str, default='/media/user/data/meta_gan/Matching-DAGAN-1wayKshot/coarse-data/ffhqaging128/')
-parser.add_argument('--storepath', nargs="?", type=str,
-                    default='/media/user/data/meta_gan/Matching-DAGAN-1wayKshot/datasets/')
-parser.add_argument('--image_width', nargs="?", type=int, default=128)
-parser.add_argument('--image_channel', nargs="?", type=int, default=3)
-parser.add_argument('--augmented_support', nargs="?", type=int, default=3000)
+    args = parser.parse_args()
 
-args = parser.parse_args()
-
-dataset = str(args.dataroot.split('/')[-2]) + '_{}'.format(args.augmented_support)
-generate_image_label_pairs(dataroot=args.dataroot, store_path=args.storepath, dataset=dataset,
-                           image_size=args.image_width, channels=args.image_channel,
-                           each_class_total_samples=args.augmented_support)
+    dataset = str(args.dataroot.split('/')[-2]) + '_{}'.format(args.augmented_support)
+    generate_image_label_pairs(dataroot=args.dataroot, store_path=args.storepath, dataset=dataset,
+                            image_size=args.image_width, channels=args.image_channel,
+                            each_class_total_samples=args.augmented_support)
 
 
 # root_csv = '/media/user/data/meta_gan/DeltaGAN/FFHQ-Aging-Dataset-master/ffhq_aging_labels.csv'
