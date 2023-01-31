@@ -657,7 +657,7 @@ class flowersDAGANDataset(DAGANDataset):
 
     def load_dataset(self, gan_training_index):
         # self.x = np.load("../Matching-DAGAN-1wayKshot/datasets/flowers_data.npy")
-        self.x = np.load("../Matching-DAGAN-1wayKshot/datasets/flowers_c8189_s128_data.npy")
+        self.x = np.load("./datasets/flowersflowers_3000.npy")
         print('data shape', np.shape(self.x))
         # print('max value', np.max(self.x))
         # self.x = self.x / np.max(self.x)
@@ -700,7 +700,7 @@ class birdsDAGANDataset(DAGANDataset):
                                                 general_classification_samples, selected_classes, image_size)
 
     def load_dataset(self, gan_training_index):
-        self.x = np.load("../Matching-DAGAN-1wayKshot/datasets/birds_c11788_s128_data.npy")
+        self.x = np.load("./datasets/nabirdsnabirds_3000.npy")
         print('data shape', np.shape(self.x))
         # print('here',np.min(self.x[:100],axis=(0,1,2,3)),np.mean(self.x[:100],axis=(0,1,2,3)),np.max(self.x[:100],axis=(0,1,2,3)),np.std(self.x[:100],axis=(0,1,2,3)))
         # self.x = self.x / np.max(self.x)
